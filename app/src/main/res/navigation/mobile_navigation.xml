@@ -8,18 +8,31 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.example.mercadito.ui.home.HomeFragment"
-        android:label="@string/title_home"
+        android:label="@string/fragment_home_title"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.mercadito.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_shoplist"
+        android:name="com.example.mercadito.ui.home.ShopListFragment"
+        android:label="@string/fragment_shoplist_title"
+        tools:layout="@layout/fragment_shoplist" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.mercadito.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_historic"
+        android:name="com.example.mercadito.ui.home.HistoricFragment"
+        android:label="@string/fragment_historic_title"
+        tools:layout="@layout/fragment_historic" />
+
+    <fragment
+        android:id="@+id/navigation_categories"
+        android:name="com.example.mercadito.ui.home.CategoriesFragment"
+        android:label="@string/fragment_categories_title"
+        tools:layout="@layout/fragment_categories" />
+
+    <fragment
+        android:id="@+id/navigation_user"
+        android:name="com.example.mercadito.ui.home.UserFragment"
+        android:label="@string/fragment_login_title"
+        tools:layout="@layout/fragment_user" />
+
 </navigation>

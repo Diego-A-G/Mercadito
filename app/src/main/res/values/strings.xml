@@ -8,7 +8,7 @@
     <string name="fragment_historic_title">Mis Listas</string>
     <string name="fragment_home_title">Noticias</string>
     <string name="fragment_shoplist_title">Lista de Compras</string>
-    <string name="fragment_categories_title">Categorias</string>
+    <string name="fragment_login_title">Usuario</string>
 
     <string name="fragment_login_user_editText">Usuario</string>
     <string name="fragment_password_user_editText">Contraseña</string>
