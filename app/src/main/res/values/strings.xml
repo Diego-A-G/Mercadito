@@ -3,4 +3,18 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <string name="fragment_categories_title">Categorias</string>
+    <string name="fragment_historic_title">Mis Listas</string>
+    <string name="fragment_home_title">Noticias</string>
+    <string name="fragment_shoplist_title">Lista de Compras</string>
+    <string name="fragment_categories_title">Categorias</string>
+
+    <string name="fragment_login_user_editText">Usuario</string>
+    <string name="fragment_password_user_editText">Contraseña</string>
+    <string name="fragment_email_user_editText">Correo</string>
+    <string name="fragment_login_button">Iniciar Sesion</string>
+
+
+
 </resources>

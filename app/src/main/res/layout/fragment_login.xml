@@ -7,11 +7,11 @@
     <!-- Imagen alusiva al login -->
     <ImageView
         android:id="@+id/imageViewLogin"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="@dimen/fragment_login_icon_size"
+        android:layout_height="@dimen/fragment_login_icon_size"
         android:layout_centerHorizontal="true"
         android:src="@drawable/profile"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="@dimen/fragment_login_margin_top"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -19,10 +19,12 @@
     <!-- Campo de texto para el usuario -->
     <EditText
         android:id="@+id/editTextUsername"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="50dp"
-        android:hint="Usuario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragment_login_margin_top"
+        android:layout_margin="@dimen/fragment_login_margin"
+        android:padding="@dimen/fragment_login_padding"
+        android:hint="@string/fragment_login_user_editText"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,10 +33,11 @@
     <!-- Campo de texto para la contraseña -->
     <EditText
         android:id="@+id/editTextPassword"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="50dp"
-        android:hint="Contraseña"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fragment_login_margin"
+        android:padding="@dimen/fragment_login_padding"
+        android:hint="@string/fragment_password_user_editText"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,10 +46,10 @@
     <!-- Botón de inicio de sesión -->
     <Button
         android:id="@+id/buttonLogin"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="50dp"
-        android:text="Iniciar sesión"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="@dimen/fragment_login_margin_top"
+        android:text="@string/fragment_login_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/editTextPassword"/>

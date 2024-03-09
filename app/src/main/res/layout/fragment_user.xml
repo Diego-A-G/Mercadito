@@ -8,10 +8,10 @@
     <!-- Icono de usuario en la parte superior -->
     <ImageView
         android:id="@+id/userIcon"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/fragment_login_icon_size"
+        android:layout_height="@dimen/fragment_login_icon_size"
         android:src="@drawable/profile"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="@dimen/fragment_login_margin_top"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -19,10 +19,11 @@
     <!-- EditText deshabilitado para el nombre -->
     <EditText
         android:id="@+id/editTextName"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="50dp"
-        android:hint="Nombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fragment_login_margin"
+        android:padding="@dimen/fragment_login_padding"
+        android:hint="@string/fragment_login_user_editText"
         android:enabled="false"
         app:layout_constraintTop_toBottomOf="@id/userIcon"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,10 +32,11 @@
     <!-- EditText deshabilitado para el correo -->
     <EditText
         android:id="@+id/editTextEmail"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="50dp"
-        android:hint="Correo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fragment_login_margin"
+        android:padding="@dimen/fragment_login_padding"
+        android:hint="@string/fragment_email_user_editText"
         android:enabled="false"
         app:layout_constraintTop_toBottomOf="@id/editTextName"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,10 +45,11 @@
     <!-- EditText deshabilitado para la clave -->
     <EditText
         android:id="@+id/editTextPassword"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="50dp"
-        android:hint="Clave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fragment_header_margin"
+        android:padding="@dimen/fragment_body_padding"
+        android:hint="@string/fragment_password_user_editText"
         android:enabled="false"
         app:layout_constraintTop_toBottomOf="@id/editTextEmail"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,40 +61,38 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="3"
-        android:layout_marginTop="50dp"
+        android:layout_margin="@dimen/fragment_header_margin"
+        android:padding="@dimen/fragment_body_padding"
         app:layout_constraintTop_toBottomOf="@id/editTextPassword"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
             android:id="@+id/editIcon"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="@dimen/fragment_header_icon_size"
+            android:layout_height="@dimen/fragment_header_icon_size"
             android:src="@drawable/edit"
             android:layout_weight="1"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:padding="16dp"/>
+            app:layout_constraintStart_toStartOf="parent"/>
 
         <ImageView
             android:id="@+id/acceptIcon"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="@dimen/fragment_header_icon_size"
+            android:layout_height="@dimen/fragment_header_icon_size"
             android:layout_weight="1"
             android:src="@drawable/check_mark"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/cancelIcon"
-            android:padding="16dp"/>
+            app:layout_constraintEnd_toStartOf="@id/cancelIcon"/>
 
         <ImageView
             android:id="@+id/cancelIcon"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="@dimen/fragment_header_icon_size"
+            android:layout_height="@dimen/fragment_header_icon_size"
             android:src="@drawable/cancel"
             android:layout_weight="1"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:padding="16dp"/>
+            app:layout_constraintEnd_toEndOf="parent"/>
 
 
     </LinearLayout>
