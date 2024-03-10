@@ -28,12 +28,17 @@ class NewsAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentItem = dataList[position]
         holder.title.text = currentItem.title
-        holder.imageView.setImageResource(R.drawable.house)
+        val resourceId = holder.itemView.context.resources.getIdentifier(currentItem.images, "drawable", holder.itemView.context.packageName)
+
+        if (resourceId != 0) holder.imageView.setImageResource(resourceId)
+        else holder.imageView.setImageResource(R.drawable.shopping_bag)
+
         holder.description.text = currentItem.description
         holder.itemView.setOnClickListener {
             itemClickListener.onItemClick(currentItem)
         }
     }
+
 
     override fun getItemCount() = dataList.size
 }

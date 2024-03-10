@@ -37,11 +37,13 @@ class NewsFragment : Fragment(), IItemTouched {
         super.onViewCreated(view, savedInstanceState)
         initViewModel()
         setObservers()
-        initAdapter()
     }
 
     private fun setObservers() {
-        newsViewModel
+        newsViewModel.getNews().observe(viewLifecycleOwner){
+            initAdapter(it)
+        }
+        newsViewModel.fetchNews()
     }
 
     private fun initViewModel() {
@@ -49,32 +51,11 @@ class NewsFragment : Fragment(), IItemTouched {
         newsViewModel = ViewModelProvider(this,factory)[NewsViewModel::class.java]
     }
 
-    private fun initAdapter() {
+    private fun initAdapter(news: List<NewsVO>) {
         val recyclerView = binding.newsRecyclerView
-        val dataList = initListNews() // Obtener la lista de noticias
-
-        val adapter = NewsAdapter(dataList,this)
+        val adapter = NewsAdapter(news,this)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
-    }
-
-
-    private fun initListNews():List<NewsVO> {
-        return listOf<NewsVO>(
-            NewsVO("La papa subio","papita","la papa esta a 5k"),
-            NewsVO("La papa subio","papita","la papa esta a 5k"),
-            NewsVO("La papa subio","papita","la papa esta a 5k"),
-            NewsVO("La papa subio","papita","la papa esta a 5k"),
-            NewsVO("La papa subio","papita","la papa esta a 5k"),
-            NewsVO("La papa subio","papita","la papa esta a 5k"),
-            NewsVO("La papa subio","papita","la papa esta a 5k"),
-            NewsVO("La papa subio","papita","la papa esta a 5k"),
-            NewsVO("La papa subio","papita","la papa esta a 5k"),
-            NewsVO("La papa subio","papita","la papa esta a 5k"),
-            NewsVO("La papa subio","papita","la papa esta a 5k"),
-            NewsVO("La papa subio","papita","la papa esta a 5k")
-        )
-
     }
 
     override fun onDestroyView() {
