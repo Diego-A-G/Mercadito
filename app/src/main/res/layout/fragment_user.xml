@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/soft_grey">
 
     <!-- Icono de usuario en la parte superior -->
     <ImageView
@@ -29,6 +30,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <EditText
+        android:id="@+id/editTextAlias"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fragment_login_margin"
+        android:padding="@dimen/fragment_login_padding"
+        android:hint="@string/fragment_login_user_editText"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@id/editTextName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
     <!-- EditText deshabilitado para el correo -->
     <EditText
         android:id="@+id/editTextEmail"
@@ -38,7 +51,7 @@
         android:padding="@dimen/fragment_login_padding"
         android:hint="@string/fragment_email_user_editText"
         android:enabled="false"
-        app:layout_constraintTop_toBottomOf="@id/editTextName"
+        app:layout_constraintTop_toBottomOf="@id/editTextAlias"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -65,12 +78,13 @@
         android:padding="@dimen/fragment_body_padding"
         app:layout_constraintTop_toBottomOf="@id/editTextPassword"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <ImageView
             android:id="@+id/editIcon"
-            android:layout_width="@dimen/fragment_header_icon_size"
-            android:layout_height="@dimen/fragment_header_icon_size"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:src="@drawable/edit"
             android:layout_weight="1"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -78,8 +92,8 @@
 
         <ImageView
             android:id="@+id/acceptIcon"
-            android:layout_width="@dimen/fragment_header_icon_size"
-            android:layout_height="@dimen/fragment_header_icon_size"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
             android:src="@drawable/check_mark"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -87,8 +101,8 @@
 
         <ImageView
             android:id="@+id/cancelIcon"
-            android:layout_width="@dimen/fragment_header_icon_size"
-            android:layout_height="@dimen/fragment_header_icon_size"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:src="@drawable/cancel"
             android:layout_weight="1"
             app:layout_constraintBottom_toBottomOf="parent"

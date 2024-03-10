@@ -11,9 +11,13 @@
     <string name="fragment_login_title">Usuario</string>
 
     <string name="fragment_login_user_editText">Usuario</string>
+    <string name="fragment_login_alias_editText">Alias</string>
     <string name="fragment_password_user_editText">Contraseña</string>
     <string name="fragment_email_user_editText">Correo</string>
     <string name="fragment_login_button">Iniciar Sesion</string>
+
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.</string>
+
 
 
 

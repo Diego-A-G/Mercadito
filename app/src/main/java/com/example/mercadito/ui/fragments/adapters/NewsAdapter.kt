@@ -9,7 +9,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mercadito.R
 import com.example.mercadito.vo.NewsVO
 
-class NewsAdapter(private val dataList: List<NewsVO>) : RecyclerView.Adapter<NewsAdapter.ViewHolder>() {
+class NewsAdapter(
+    private val dataList: List<NewsVO>,
+    private val itemClickListener: IItemTouched
+) : RecyclerView.Adapter<NewsAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val title: TextView = itemView.findViewById(R.id.titleTextView)
@@ -27,6 +30,9 @@ class NewsAdapter(private val dataList: List<NewsVO>) : RecyclerView.Adapter<New
         holder.title.text = currentItem.title
         holder.imageView.setImageResource(R.drawable.house)
         holder.description.text = currentItem.description
+        holder.itemView.setOnClickListener {
+            itemClickListener.onItemClick(currentItem)
+        }
     }
 
     override fun getItemCount() = dataList.size

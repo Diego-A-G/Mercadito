@@ -12,7 +12,7 @@ class ItemMapper {
             cost = entity.cost,
             description = entity.description,
             amount = entity.amount,
-            shoplistId = 0
+            //shoplistId = 0
         )
     }
 

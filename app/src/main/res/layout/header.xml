@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_horizontal|center_vertical"
+    android:padding="5dp">
+
+    <!-- Aquí puedes agregar cualquier contenido que desees en tu encabezado -->
+    <ImageView
+        android:layout_width="@dimen/fragment_header_icon_size"
+        android:layout_height="@dimen/fragment_header_icon_size"
+        android:src="@drawable/newspaper"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/fragment_header_text_size"
+        android:layout_marginStart="@dimen/fragment_header_margin_start"
+        android:text="Header Text"/>
+
+</LinearLayout>

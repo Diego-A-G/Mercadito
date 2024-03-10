@@ -12,7 +12,7 @@ import com.example.mercadito.vo.ShopListVO
 
 class ShopListAdapter(
     private val context: Context,
-    private val productList: List<ShopListVO>
+    private val productList: List<ShopListVO>,
 ) : RecyclerView.Adapter<ShopListAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -29,11 +29,11 @@ class ShopListAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val recyclerView = holder.recyclerViewProducts
         val dataList = productList[position].items
-        val adapter = ArticleAdapter(dataList)
+        val adapter = ArticleAdapter(dataList.toMutableList(), null)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(context)
-        // Calcula el total de la orden
 
+        // Calcula el total de la orden para esta lista específica
         var total = 0.0
         for (product in productList[position].items) {
             total += product.cost
@@ -42,5 +42,6 @@ class ShopListAdapter(
         holder.textViewTotal.text = "Total: $total"
     }
 
-    override fun getItemCount() = 1
+    override fun getItemCount() = productList.size
+
 }

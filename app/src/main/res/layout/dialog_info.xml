@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     app:cardCornerRadius="8dp"
     app:cardElevation="4dp"
+    android:backgroundTint="@color/soft_yellow"
     app:cardUseCompatPadding="true">
 
     <LinearLayout
@@ -13,31 +14,36 @@
         android:orientation="vertical"
         android:padding="16dp">
 
+        <!-- Título -->
         <TextView
-            android:id="@+id/textViewTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mercado del 15"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <!-- Lista de productos -->
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewProducts"
+            android:id="@+id/titleDialogTextView"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:nestedScrollingEnabled="false"
-            android:orientation="horizontal"
-            />
-
-        <!-- Total -->
-        <TextView
-            android:id="@+id/textViewTotal"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Total: $500.00"
+            android:text="Título"
             android:textSize="18sp"
             android:textStyle="bold" />
+
+        <!-- Descripción Lorem Ipsum -->
+        <TextView
+            android:id="@+id/descriptionDialogTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lorem_ipsum"
+            android:textSize="16sp" />
+
+        <!-- Espacio -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <!-- Botón de Cerrar -->
+        <Button
+            android:id="@+id/closeDialogButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cerrar"
+            android:layout_gravity="center_horizontal" />
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
