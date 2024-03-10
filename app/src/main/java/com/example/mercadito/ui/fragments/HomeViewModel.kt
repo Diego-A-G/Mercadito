@@ -1,4 +1,4 @@
-package com.example.mercadito.ui.home
+package com.example.mercadito.ui.fragments
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

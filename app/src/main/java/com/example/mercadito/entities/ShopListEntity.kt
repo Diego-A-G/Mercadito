@@ -8,8 +8,7 @@ data class ShopListEntity(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
     val name: String,
-    val items: Int,
-    val total: Double,
+    val items: Int
 )
 
 

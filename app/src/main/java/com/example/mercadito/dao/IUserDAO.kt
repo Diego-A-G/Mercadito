@@ -11,9 +11,6 @@ interface IUserDAO {
     @Insert
     fun insert(user: UserEntity)
 
-    @Query("SELECT * FROM user WHERE id = :userId")
-    fun getUserById(userId: Int): UserEntity
-
     @Query("SELECT * FROM user WHERE email = :email")
     fun getUserByEmail(email: String): UserEntity
 }

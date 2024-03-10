@@ -9,7 +9,7 @@ class ListShopMapper {
         return ShopListVO(
             id = entity.id,
             name = entity.name,
-            total = entity.total
+            items = listOf()
         )
     }
 
@@ -17,7 +17,6 @@ class ListShopMapper {
         return ShopListEntity(
             id = vo.id,
             name = vo.name,
-            total = vo.total,
             items = 0 // Aquí deberías definir cómo manejar la lista de ítems
         )
     }

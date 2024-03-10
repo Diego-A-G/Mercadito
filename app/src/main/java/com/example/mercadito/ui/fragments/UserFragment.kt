@@ -1,4 +1,4 @@
-package com.example.mercadito.ui.home
+package com.example.mercadito.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
